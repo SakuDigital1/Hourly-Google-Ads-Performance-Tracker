@@ -1,117 +1,71 @@
-[Hourly Google Ads Performance Tracker
+# **Campaign Performance Hourly Tracker**
 
-Overview
+This tool automates the process of tracking Google Ads campaign performance by sending hourly email updates and logging key metrics into a Google Sheet. It ensures real-time visibility into campaign spending and efficiency, helping marketers make timely optimizations.
 
-This script automates hourly performance tracking for active Google Ads campaigns by retrieving key metrics and sending email updates while logging data into a Google Sheet.
+---
 
-Features
+## **Features**
+- 📊 **Real-Time Data Logging**: Fetches hourly Google Ads campaign data and logs it into a Google Sheet.
+- ✉ **Automated Email Alerts**: Sends an hourly summary email with key performance metrics.
+- 🔧 **Customizable Filters**: Define which campaigns to track based on naming conventions.
+- ⚡ **Optimized for Quick Insights**: Focus on key metrics like **Cost, Impressions, Clicks, Conversions, CTR, and CPC**.
 
-📩 Hourly Email Updates – Sends hourly summaries of key performance metrics.
+---
 
-📊 Google Sheets Logging – Appends real-time data to a designated Google Sheet for tracking.
+## **Setup Instructions**
 
-⚙️ Customizable Metrics – Supports Cost, Impressions, Clicks, Conversions, CTR, and CPC.
+### **1. Prerequisites**
+- Access to a **Google Ads account**.
+- A **Google Sheet** to store and visualize the data.
+- Basic familiarity with Google Ads Scripts (no coding required).
 
-🔍 Campaign Filtering – Only tracks active campaigns with impressions, ensuring relevant data.
+### **2. Steps to Set Up**
+#### **Step 1: Copy the Script**
+1. Go to **Tools & Settings > Scripts > + New Script** in your Google Ads account.
+2. Copy the script from `campaign_performance_hourly_tracker.js` and paste it into the editor.
 
-Setup Instructions
+#### **Step 2: Update Placeholders**
+Replace the following placeholders in the script:
+- `**SPREADSHEET_ID**`: Add your Google Sheet ID.
+- `**email**`: Specify the email(s) where reports should be sent.
+- `**campaignNameDoesNotContain**` and `**campaignNameContains**`: Define filters for campaigns to track.
 
-1. Prerequisites
+#### **Step 3: Authorize and Run**
+1. Save the script and click **Preview** to authorize it.
+2. Run the script to begin logging campaign data into the spreadsheet and sending hourly emails.
 
-Access to a Google Ads account with permission to run scripts.
+---
 
-A Google Sheet to store the campaign performance data.
+## **Key Metrics**
+| Metric           | Description                        |
+|-----------------|----------------------------------|
+| `Cost ($)`      | Total spend for the hour        |
+| `Impressions`   | Number of ad impressions        |
+| `Clicks`        | Number of clicks received       |
+| `Conversions`   | Number of completed actions     |
+| `CTR (%)`       | Click-Through Rate              |
+| `CPC ($)`       | Cost Per Click                  |
 
-Basic familiarity with Google Ads Scripts (no coding skills required).
+---
 
-2. Steps to Set Up
+## **Email & Spreadsheet Logging**
+- **Hourly Email Alerts**: Sent to specified emails with real-time data.
+- **Google Sheets Logging**: Appends new rows hourly for historical tracking.
 
-Step 1: Add the Script to Google Ads
+---
 
-Navigate to Google Ads → Tools & Settings → Scripts.
+## **Customization Options**
+- Modify the `metricsToReport` array to track additional metrics.
+- Change the frequency of data retrieval (e.g., every 30 minutes).
+- Adjust filtering options to include or exclude specific campaigns.
 
-Click + New Script and paste the script provided.
+---
 
-Step 2: Configure Your Settings
+## **Resources**
+- 📄 **[Google Sheet Template]([https://docs.google.com/spreadsheets/d/your-template-link](https://docs.google.com/spreadsheets/d/1RJDoiLmNIN7OPwPjBDRLP7WJ21lUgyc_X_SWRTadauQ/edit))**
+- 📘 **[Setup Guide (PDF)]**
 
-Modify the following placeholders in the script:
+---
 
-var email = ["your-email@example.com"] – Replace with the email(s) where reports should be sent.
+This tool ensures timely tracking of Google Ads campaigns, helping teams stay informed and optimize performance with minimal manual effort.
 
-var SPREADSHEET_ID = "YOUR_SPREADSHEET_ID" – Replace with your Google Sheet ID.
-
-var metricsToReport = ["Cost", "Impressions", "Clicks", "Conversions", "CTR", "CPC"] – Customize tracked metrics.
-
-Step 3: Authorize & Schedule Execution
-
-Click Authorize when prompted.
-
-Click Run to test the script and check email & sheet logs.
-
-Schedule the script to run hourly under Google Ads → Scripts → Edit Schedule.
-
-Key Metrics Logged
-
-Metric
-
-Description
-
-Cost ($)
-
-Total ad spend for the day
-
-Impressions
-
-Number of times ads were shown
-
-Clicks
-
-Total user clicks on ads
-
-Conversions
-
-Number of completed actions (e.g., leads, sales)
-
-CTR (%)
-
-Click-through rate (Clicks / Impressions * 100)
-
-CPC ($)
-
-Cost per click (Cost / Clicks)
-
-Additional Notes
-
-The script only tracks active campaigns with impressions.
-
-Ensures accurate currency formatting based on account settings.
-
-Logs errors and execution details in Google Ads Logs.
-
-Troubleshooting
-
-Issue: Script not running or not sending emails?
-
-Verify authorization and execution logs in Google Ads.
-
-Check Google Ads account permissions.
-
-Ensure the spreadsheet ID and email settings are correct.
-
-Issue: Missing or incorrect data in Google Sheets?
-
-Confirm the spreadsheet exists and is accessible.
-
-Ensure metricsToReport includes the required fields.
-
-Resources
-
-📄 Google Ads Scripts Documentation
-
-📘 Google Sheets API Documentation
-
-🛠 Support: If you encounter issues, consult Google Ads logs or adjust script settings accordingly.
-
-🚀 This script helps you stay on top of Google Ads performance in real time. Happy optimizing!
-
-](https://github.com/SakuDigital1/Hourly-Google-Ads-Performance-Tracker/new/main)
