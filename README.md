@@ -1,4 +1,4 @@
-Hourly Google Ads Performance Tracker
+[Hourly Google Ads Performance Tracker
 
 Overview
 
@@ -114,3 +114,4 @@ Resources
 
 🚀 This script helps you stay on top of Google Ads performance in real time. Happy optimizing!
 
+](https://github.com/SakuDigital1/Hourly-Google-Ads-Performance-Tracker/new/main)
